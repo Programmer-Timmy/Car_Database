@@ -3,10 +3,10 @@
  * Database Settings
  */
 $database = [
-    'host' => 'localhost',
-    'user' => 'root',
-    'password' => '',
-    'database' => 'portfolio',
+    'host' => '192.168.2.10:3307',
+    'user' => 'CarDatabase',
+    'password' => 'qP4/8jn)UT',
+    'database' => 'CarDatabase',
 ];
 
 /**
@@ -35,7 +35,7 @@ $site = [
     'maintenance' => false, // shows the maintenance page if true the client's IP is not in the allowedIPs array
 
     // ajax on or off
-    'ajax' => false, // if true the site will only load the ajax pages
+    'ajax' => true, // if true the site will only load the ajax pages
 
     // Auth settings
     'user-adminTable' => 'users', // the table name that will be used to check if the user/admin exists
@@ -50,14 +50,14 @@ $site = [
     ],
 
     // Accounts settings
-    'accounts'=>[
+    'accounts' => [
         'enabled' => false,
         'sessionName' => 'userId', // the session name that will be used to store that the user is logged in check by isset function
         'filterInUrl' => '', // empty string means no filter
     ],
 
     // popup settings
-    'showPopup' => true,
+    'showPopup' => false,
     'popupTitle' => 'Note',
     'popupMessage' => 'This is a popup you can change it in the settings!',
     'popupButtons' => [
@@ -92,6 +92,7 @@ $titles = [
     'about' => 'About Us - ' . $site['siteName'],
     'contact' => 'Contact Us - ' . $site['siteName'],
     '404' => '404 - Oops page not found!',
+    'car' => 'Auto - ' . $site['siteName'],
     // Add more titles as needed
 ];
 

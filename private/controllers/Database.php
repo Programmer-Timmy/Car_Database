@@ -7,6 +7,7 @@ class Database
     private $user;
     private $password;
     private $database;
+
     function __construct()
     {
         global $database;
@@ -67,12 +68,12 @@ class Database
     /**
      * @param string $table
      * @param array $columns
-     * @param $join
+     * @param array $join
      * @param array $where
      * @param string $orderBy
      * @return mixed
      */
-    public static function getAll(string $table, array $columns = ['*'],$join = [], array $where = [], string $orderBy = '')
+    public static function getAll(string $table, array $columns = ['*'], array $join = [], array $where = [], string $orderBy = '')
     {
         $sql = "SELECT ";
         foreach ($columns as $column) {
@@ -86,7 +87,7 @@ class Database
         if (!empty($where)) {
             $sql .= " WHERE ";
             foreach ($where as $column => $value) {
-                $sql .= "$column = ? AND ";
+                $sql .= "$column = ? and ";
             }
             $sql = substr($sql, 0, -5);
         }
@@ -106,7 +107,7 @@ class Database
      * @param string $orderBy
      * @return mixed
      */
-    public static function get(string $table, array $columns = ['*'],$join = [], array $where = [], string $orderBy = '')
+    public static function get(string $table, array $columns = ['*'], $join = [], array $where = [], string $orderBy = '')
     {
         $sql = "SELECT ";
         foreach ($columns as $column) {
