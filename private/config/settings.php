@@ -3,9 +3,9 @@
  * Database Settings
  */
 $database = [
-    'host' => '192.168.2.10:3307',
+    'host' => 'localhost,
     'user' => 'CarDatabase',
-    'password' => 'qP4/8jn)UT',
+    'password' => '',
     'database' => 'CarDatabase',
 ];
 
