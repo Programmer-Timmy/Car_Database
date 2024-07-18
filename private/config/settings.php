@@ -4,7 +4,7 @@
  */
 $database = [
     'host' => 'localhost,
-    'user' => 'CarDatabase',
+    'user' => 'root',
     'password' => '',
     'database' => 'CarDatabase',
 ];
